@@ -1,475 +1,1497 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Don Smaily Chickles | Perfil</title>
-  
-  <meta name="color-scheme" content="dark">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Electrolize&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style type="text/tailwindcss">
-    :root {
-      --primary: #2563eb;
-    }
-    body {
-      margin: 0;
-      font-family: 'Electrolize', system-ui, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-    }
-    .app {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .profile-header {
-      background: white;
-      border-radius:;
-      overflow: hidden;
-      box-shadow:;
-    }
-    .cover {
-    	position: relative;
-    	width: 100%;
-      height: 240px;
-      background: url('https://i.postimg.cc/5tjZDbFG/8d7265278f12c0dac6bdacbc0ab2ea19.webp') center/cover;
-    }
-    .profile-info {
-      display:;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-      padding:0;
-      margin-top: 20px;
-      text-align: center;
-    }
-    .avatar {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 6px solid white;
-      object-fit: cover;
-    }
-    .name {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin: 0;
-    }
-    .tabs {
-      display: flex;
-      gap: 8px;
-      padding: 0 30px 15px;
-      border-top: 1px solid #e2e8f0;
-    }
-    .tab {
-      padding: 16px 20px;
-      border: none;
-      background: none;
-      font-weight: 700;
-      cursor: pointer;
-      color: #64748b;
-    }
-    .tab.active {
-      color: var(--primary);
-      border-bottom: 3px solid var(--primary);
-    }
-    .panel { display: none; }
-    .panel.active { display: block; }
-    .composer {
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    }
-    textarea {
-      width: 100%;
-      min-height: 100px;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 16px;
-      font-size: 1rem;
-      resize: vertical;
-    }
-    .btn {
-      padding: 12px 20px;
-      border-radius: 14px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      color: white;
-    }
-    .post, .story {
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      margin-bottom: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    }
-    .post-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .post-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 12px;
-    }
-    .gallery-item {
-      aspect-ratio: 1/1;
-      border-radius: 16px;
-      overflow: hidden;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .story-container {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-    }
-    .story-item {
-      width: 120px;
-      height: 200px;
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
-      flex-shrink: 0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .story-item img, .story-item video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .story-author {
-      position: absolute;
-      bottom: 8px;
-      left: 8px;
-      color: white;
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    }
-  </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Don Smaily Chickles | Perfil Social</title>
+	
+	<meta name="color-scheme" content="dark" />
+	<meta name="description" content="Un blog personal donde comparto ideas, experimentos, vídeos y aprendizajes de forma sencilla, humana y útil."/>
+	<!-- Open Graph -->
+	<meta property="og:title" content="Mi Blog Personal"/>
+	<meta property="og:description" content="Ideas, vídeos y experimentos con un enfoque personal y útil."/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Electrolize&family=Freckle+Face&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sedgwick+Ave+Display&family=Sofadi+One&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<style>
+:root {
+		--bg: #eef2ff;
+		--card: rgba(255, 255, 255, 0.88);
+		--card-solid: #ffffff;
+		--text: #111827;
+		--muted: #6b7280;
+		--line: rgba(148, 163, 184, 0.35);
+		--primary: #2563eb;
+		--primary-dark: #1d4ed8;
+		--accent: #8b5cf6;
+		--pink: #ec4899;
+		--green: #10b981;
+		--danger: #ef4444;
+		--shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+		--radius: 24px;
+	}
+.sofadi-one-regular {
+  font-family: "Sofadi One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-neue-light {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-neue-bold {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.comic-neue-light-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.comic-neue-regular-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.comic-neue-bold-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.freckle-face-regular {
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: 'Inter', system-ui, sans-serif;
+color: var(--text);
+background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 32%), radial-gradient(circle at top right, rgba(236, 72, 153, 0.18), transparent 30%), linear-gradient(135deg, #eef2ff, #f8fafc 45%, #fdf2f8);
+min-height: 100vh;
+}
+
+a {
+color: inherit;
+}
+
+		.app {
+			max-width: 1180px;
+			margin: 0 auto;
+			padding: 24px;
+		}
+
+		.profile-shell {
+			overflow: hidden;
+			border-radius: 0 0 32px 32px;
+			background: rgba(255, 255, 255, 0.72);
+			backdrop-filter: blur(18px);
+			box-shadow: var(--shadow);
+			border: 1px solid rgba(255, 255, 255, 0.65);
+		}
+
+		.cover {
+			height: 170px;
+			position: relative;
+			background:
+			linear-gradient(120deg, rgba(15, 23, 42, 0.15), rgba(37, 99, 235, 0.15)), center/cover;
+			overflow: hidden;
+		}
+		
+		.img-cober {
+			width: 100%;
+			height:100%;
+			object-fit: cover;
+			margin-top: -10px;
+		}
+
+		.cover::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(to top, rgba(15, 23, 42, 0.62), transparent 60%);
+		}
+
+		.cover-badge {
+			position: absolute;
+			right: 24px;
+			bottom: 24px;
+			z-index: 2;
+			padding: 2px;
+			border-radius: 999px;
+			color: white;
+			font-weight: 700;
+			background: rgba(255, 255, 255, 0.16);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			backdrop-filter: blur(14px);
+		}
+
+		.profile-top {
+			display: flex;
+			gap: 22px;
+			align-items: end;
+			padding: 0 28px 24px;
+			margin-top: -82px;
+			position: relative;
+			z-index: 4;
+		}
+
+		.avatar-wrap {
+			margin-top: 30px;
+			width: 100%;
+			height: 360px;
+			min-height: 360px;
+			min-width: 100%;
+			position: relative;
+			overflow: hidden;
+			align-content: center;
+			align-items: center;
+			border:5px solid white;
+			border-radius: 0%;
+		}
+
+		.avatar {
+			width: 100%;
+			height: 100%;
+			border-radius: 10%;
+			object-fit: cover;
+			position: relative;
+			margin-top: -10px;
+			opacity: 99%;
+		}
+
+		.identity {
+			flex: 1;
+			padding-bottom: 10px;
+		}
+
+		.identity h1 {
+			margin: 0;
+			font-size: clamp(2rem, 5vw, 3.1rem);
+			color: #0f172a;
+			letter-spacing: -0.06em;
+			line-height: 1;
+		}
+
+		.identity p {
+			margin: 10px 0 0;
+			color: var(--muted);
+			font-weight: 500;
+		}
+
+		.actions {
+			display: flex;
+			gap: 10px;
+			padding-bottom: 14px;
+			flex-wrap: wrap;
+		}
+
+		.btn {
+			border: 0;
+			cursor: pointer;
+			border-radius: 14px;
+			padding: 12px 16px;
+			font-weight: 800;
+			font-family: inherit;
+			transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			justify-content: center;
+		}
+
+		.btn:hover {
+			transform: translateY(-1px);
+		}
+
+		.btn-primary {
+			color: white;
+			background: linear-gradient(135deg, var(--primary), var(--accent));
+			box-shadow: 0 12px 22px rgba(37, 99, 235, 0.24);
+		}
+
+		.btn-soft {
+			background: #f1f5f9;
+			color: #0f172a;
+		}
+
+		.btn-ghost {
+			background: transparent;
+			color: var(--muted);
+		}
+
+		.btn-danger {
+			background: #fee2e2;
+			color: #b91c1c;
+		}
+
+		.tabs {
+			display: flex;
+			gap: 8px;
+			padding: 0 28px 18px;
+			border-top: 1px solid var(--line);
+			overflow-x: auto;
+		}
+
+		.tab {
+			border: 0;
+			background: transparent;
+			cursor: pointer;
+			padding: 18px 20px;
+			font-weight: 800;
+			font-family: inherit;
+			color: var(--muted);
+			border-bottom: 4px solid transparent;
+			white-space: nowrap;
+		}
+
+		.tab.active {
+			color: var(--primary);
+			border-bottom-color: var(--primary);
+		}
+
+		.layout {
+			display: grid;
+			grid-template-columns: 360px 1fr;
+			gap: 22px;
+			margin-top: 22px;
+			align-items: start;
+		}
+
+		.side-card,
+		.composer,
+		.post,
+		.gallery-panel,
+		.info-panel {
+			background: var(--card);
+			backdrop-filter: blur(20px);
+			border: 1px solid rgba(255, 255, 255, 0.72);
+			border-radius: var(--radius);
+			box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+		}
+
+		.side-card {
+			padding: 22px;
+			position: sticky;
+			top: 18px;
+		}
+
+		.side-card h3 {
+			margin: 0 0 14px;
+			font-size: 1.15rem;
+		}
+
+		.mini-list {
+			display: grid;
+			gap: 12px;
+			color: #334155;
+			font-weight: 600;
+		}
+
+		.mini-item {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			padding: 12px;
+			border-radius: 16px;
+			background: rgba(241, 245, 249, 0.72);
+		}
+
+		.content {
+			display: grid;
+			gap: 18px;
+		}
+
+		.panel {
+			display: none;
+		}
+
+		.panel.active {
+			display: block;
+		}
+
+		.composer {
+			padding: 18px;
+			margin-bottom: 18px;
+		}
+
+		textarea,
+		input {
+			font-family: inherit;
+		}
+
+		.composer textarea {
+			width: 100%;
+			min-height: 112px;
+			resize: vertical;
+			border: 1px solid var(--line);
+			border-radius: 18px;
+			padding: 16px;
+			outline: none;
+			font-size: 1rem;
+			background: rgba(248, 250, 252, 0.86);
+		}
+
+		.composer textarea:focus {
+			border-color: rgba(37, 99, 235, 0.55);
+			box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+		}
+
+		.composer-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			margin-top: 14px;
+			flex-wrap: wrap;
+		}
+
+		.file-pill {
+			cursor: pointer;
+			padding: 12px 14px;
+			border-radius: 14px;
+			background: #f8fafc;
+			border: 1px dashed rgba(37, 99, 235, 0.35);
+			color: #1e3a8a;
+			font-weight: 800;
+			display: inline-flex;
+			gap: 8px;
+			align-items: center;
+		}
+
+		#mediaInput {
+			display: none;
+		}
+
+		.file-name {
+			color: var(--muted);
+			font-size: 0.9rem;
+			margin-left: 8px;
+		}
+
+		.post {
+			padding: 18px;
+			margin-bottom: 18px;
+			overflow: hidden;
+		}
+
+		.post-head {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-bottom: 14px;
+		}
+
+		.post-avatar {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 2px solid white;
+			box-shadow: 0 4px 12px rgba(15, 23, 42, 0.16);
+		}
+
+		.post-name {
+			font-weight: 900;
+		}
+
+		.post-date {
+			color: var(--muted);
+			font-size: 0.86rem;
+			margin-top: 2px;
+		}
+
+		.post-text {
+			line-height: 1.65;
+			white-space: pre-wrap;
+			color: #1f2937;
+			font-weight: 500;
+		}
+
+		.media-grid {
+			display: grid;
+			gap: 8px;
+			margin-top: 14px;
+			overflow: hidden;
+			border-radius: 20px;
+		}
+
+		.media-grid.one {
+			grid-template-columns: 1fr;
+		}
+
+		.media-grid.two,
+		.media-grid.many {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.media-grid img,
+		.media-grid video {
+			width: 100%;
+			height: 320px;
+			object-fit: cover;
+			background: #020617;
+			display: block;
+		}
+
+		.media-grid.one img,
+		.media-grid.one video {
+			height: auto;
+			max-height: 620px;
+		}
+
+		.metrics {
+			display: flex;
+			justify-content: space-between;
+			color: var(--muted);
+			font-size: 0.92rem;
+			padding: 14px 0 10px;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.post-actions {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 8px;
+			padding-top: 8px;
+		}
+
+		.action-btn {
+			border: 0;
+			background: transparent;
+			border-radius: 12px;
+			padding: 11px;
+			font-weight: 800;
+			color: #475569;
+			cursor: pointer;
+			font-family: inherit;
+			transition: background .2s ease, color .2s ease;
+		}
+
+		.action-btn:hover {
+			background: #f1f5f9;
+		}
+
+		.action-btn.liked {
+			color: var(--primary);
+			background: #dbeafe;
+		}
+
+		.comments {
+			margin-top: 14px;
+			display: grid;
+			gap: 10px;
+		}
+
+		.comment {
+			background: #f8fafc;
+			padding: 10px 12px;
+			border-radius: 14px;
+			color: #334155;
+			line-height: 1.45;
+		}
+
+		.comment strong {
+			color: #0f172a;
+		}
+
+		.comment-form {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 10px;
+			margin-top: 12px;
+		}
+
+		.comment-form input {
+			border: 1px solid var(--line);
+			border-radius: 14px;
+			padding: 12px 14px;
+			outline: none;
+			background: #f8fafc;
+		}
+
+		.gallery-panel,
+		.info-panel {
+			padding: 22px;
+		}
+
+		.section-title {
+			margin: 0 0 16px;
+			font-size: 1.5rem;
+			letter-spacing: -0.03em;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 12px;
+		}
+
+		.gallery-item {
+			aspect-ratio: 1 / 1;
+			overflow: hidden;
+			border-radius: 20px;
+			background: #0f172a;
+			position: relative;
+			cursor: pointer;
+			box-shadow: 0 12px 22px rgba(15, 23, 42, 0.12);
+		}
+
+		.gallery-item img,
+		.gallery-item video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: transform .35s ease;
+		}
+
+		.gallery-item:hover img,
+		.gallery-item:hover video {
+			transform: scale(1.06);
+		}
+
+		.gallery-type {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: white;
+			background: rgba(15, 23, 42, 0.65);
+			padding: 6px 9px;
+			border-radius: 999px;
+			font-size: 0.8rem;
+			font-weight: 800;
+			backdrop-filter: blur(10px);
+		}
+
+		.story-container {
+			display: flex;
+			gap: 16px;
+			overflow-x: auto;
+			padding-bottom: 10px;
+		}
+		.story-item {
+			width: 120px;
+			height: 200px;
+			border-radius: 20px;
+			overflow: hidden;
+			position: relative;
+			flex-shrink: 0;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		}
+
+		.story-item img, .story-item video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.story-author {
+			position: absolute;
+			bottom: 8px;
+			left: 8px;
+			color: white;
+			font-weight: 700;
+			font-size: 0.85rem;
+			text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+		}
+
+		.info-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 14px;
+		}
+
+		.info-card {
+			padding: 18px;
+			border-radius: 20px;
+			background: linear-gradient(135deg, rgba(248, 250, 252, 0.92), rgba(255, 255, 255, 0.82));
+			border: 1px solid var(--line);
+		}
+
+		.info-card span {
+			display: block;
+			color: var(--muted);
+			font-size: 0.88rem;
+			font-weight: 700;
+			margin-bottom: 6px;
+		}
+
+		.info-card strong {
+			font-size: 1.05rem;
+		}
+
+		.empty {
+			padding: 32px;
+			text-align: center;
+			color: var(--muted);
+			background: rgba(255, 255, 255, 0.62);
+			border: 1px dashed rgba(148, 163, 184, 0.6);
+			border-radius: 22px;
+		}
+
+		.toast {
+			position: fixed;
+			left: 50%;
+			bottom: 28px;
+			transform: translateX(-50%) translateY(30px);
+			background: #0f172a;
+			color: white;
+			padding: 13px 18px;
+			border-radius: 999px;
+			opacity: 0;
+			pointer-events: none;
+			transition: .25s ease;
+			z-index: 50;
+			font-weight: 700;
+			box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+		}
+
+		.toast.show {
+			opacity: 1;
+			transform: translateX(-50%) translateY(0);
+		}
+
+		.loader {
+			display: none;
+			color: var(--muted);
+			font-weight: 800;
+			text-align: center;
+			padding: 18px;
+		}
+
+		.loader.show {
+			display: block;
+		}
+
+@media (max-width: 900px) {
+			.app {
+				padding: 0 12px 24px;
+			}
+
+			.profile-shell {
+				border-radius: 0 0 24px 24px;
+			}
+
+			.cover {
+				height: 170px;
+			}
+
+			.profile-top {
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+				padding: 0 18px 20px;
+			}
+
+			.avatar-wrap {
+			margin-top: 30px;
+				width: 100%;
+				height: 360px;
+				min-width: 100%;
+			}
+
+			.actions {
+				justify-content: center;
+			}
+
+			.layout {
+				grid-template-columns: 1fr;
+			}
+
+			.side-card {
+				position: static;
+			}
+
+			.gallery {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.info-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.media-grid.two,
+			.media-grid.many {
+				grid-template-columns: 1fr;
+			}
+
+			.media-grid img,
+			.media-grid video {
+				height: auto;
+				max-height: 520px;
+			}
+		}
+	</style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="profile-header text-center">
-      <div class="cover"></div>
-      
-      <div class="profile-info">
-     <!--   <img class="avatar" src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7" alt="Perfil">-->
-        
-        <div style="bg-white">
-          <h1 class="name">Don Smaily Chickles</h1>
-          <p style="margin:4px 0 0; color:#64748b;">Creador de momentos</p>
-        </div></div><br>
-        
-        <div>
-          <button class="btn btn-primary" onclick="showProfileSwitcher()">👤 Cambiar Perfil</button>
-        </div>
+<nav class="tabs sticky top-0 z-50">
+  	<button class="tab active" data-tab="posts">Publicaciones</button>
+  	<button class="tab" data-tab="stories">Stories</button>
+  	<button class="tab" data-tab="photos">Fotos</button>
+  	<button class="tab" data-tab="about">Información</button>
+  	</nav>
+  <header class="profile-shell">
+ <div class="app">
+   	  <section class="profile-top">
+   		<div class="avatar-wrap">
+   		  <img class="avatar" src="https://i.postimg.cc/FRXr8V5d/2364f9cea51bf9a4452e7c136914b996.webp" alt="Foto de perfil de Don Smaily Chickles"/></div>
+<div class="identity">
+  <h1 class="sofadi-one-regular">Don Smaily Chickles</h1>
+  <p>Creador de momentos, coleccionista de historias y dueño de una vibra única.</p></div>
 
-      <!-- Tabs -->
-      <div class="tabs">
-        <button class="tab active" data-tab="posts">Publicaciones</button>
-        <button class="tab" data-tab="stories">Stories</button>
-        <button class="tab" data-tab="photos">Fotos</button>
-        <button class="tab" data-tab="about">Información</button>
-      </div>
-    </div>
+				<div class="actions">
+					<button class="btn btn-primary" onclick="scrollToComposer()">＋ Crear publicación</button>
+					<button class="btn btn-soft" onclick="showProfileSwitcher()">👤 Cambiar perfil</button>
+					<button class="btn btn-primary" onclick="scrollToComposer()">＋ Crear publicación</button>
+					<button class="btn btn-soft" onclick="showToast('Puedes personalizar este botón para contacto o mensaje.')">💬 Mensaje</button>
+				</div>
+			</section>
 
-    <!-- Contenido -->
-    <div style="margin-top: 25px;">
-      
-      <!-- Publicaciones -->
-      <div id="postsPanel" class="panel active">
-        <div class="composer">
-          <textarea id="postContent" placeholder="¿Qué quieres publicar?"></textarea>
-          <div style="margin-top:12px; display:flex; gap:12px; align-items:center;">
-            <input type="file" id="mediaInput" accept="image/*,video/*" multiple style="display:none">
-            <button class="btn" onclick="document.getElementById('mediaInput').click()">📷 Foto/Video</button>
-            <button class="btn btn-primary" onclick="createPost()">Publicar</button>
-          </div>
-        </div>
-        <div id="postsList"></div>
-      </div>
+			<nav class="tabs">
+				<button class="tab active" data-tab="posts">Publicaciones</button>
+				<button class="tab" data-tab="stories">Stories</button>
+				<button class="tab" data-tab="photos">Fotos</button>
+				<button class="tab" data-tab="about">Información</button>
+			</nav>
+		</header>
 
-      <!-- Stories -->
-      <div id="storiesPanel" class="panel">
-        <div class="composer">
-          <h3 style="margin:0 0 12px;">Crear Story (desaparece en 24h)</h3>
-          <input type="file" id="storyInput" accept="image/*,video/*">
-          <button class="btn btn-primary" style="margin-top:12px;" onclick="createStory()">Publicar Story</button>
-        </div>
-        <div id="storiesList" class="story-container"></div>
-      </div>
+		<main class="layout">
+			<aside class="side-card">
+				<h3>Intro</h3>
 
-      <!-- Fotos -->
-      <div id="photosPanel" class="panel">
-        <div class="gallery" id="gallery"></div>
-      </div>
+				<div class="mini-list">
+					<div class="mini-item">
+						🌟 Perfil de Don Smaily Chickles
+					</div>
+					<div class="mini-item">
+						📸 Multimedia, historias y recuerdos
+					</div>
+					<div class="mini-item">
+						🚀 Página conectada con Supabase
+					</div>
+					<div class="mini-item">
+						🎨 Estilo social, moderno y elegante
+					</div>
+				</div>
+			</aside>
 
-      <!-- Información -->
-      <div id="aboutPanel" class="panel">
-        <div style="background:white; padding:30px; border-radius:20px;">
-          <h2>Información de Don Smaily Chickles</h2>
-          <p>Esta es una página de perfil personal con sistema de perfiles múltiples.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+			<section class="content">
+				<div id="postsPanel" class="panel active">
+					<form id="composer" class="composer">
+						<textarea id="postContent" placeholder="¿Qué estás pensando, Don Smaily Chickles?"></textarea>
 
-  <!-- Modal de selección de perfil -->
-  <div id="profileModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); align-items:center; justify-content:center; z-index:999;">
-    <div style="background:white; padding:30px; border-radius:20px; width:90%; max-width:380px;">
-      <h3 style="margin-top:0;">¿Cómo quieres publicar?</h3>
-      
-      <div onclick="selectProfile('owner')" style="padding:16px; border:1px solid #ddd; border-radius:12px; margin:8px 0; cursor:pointer;">
-        Don Smaily Chickles
-      </div>
-      <div onclick="selectProfile('persona1')" style="padding:16px; border:1px solid #ddd; border-radius:12px; margin:8px 0; cursor:pointer;">
-        Itxel
-      </div>
-      <div onclick="selectProfile('persona2')" style="padding:16px; border:1px solid #ddd; border-radius:12px; margin:8px 0; cursor:pointer;">
-        Alguien mas
-      </div>
-      
-      <button onclick="closeProfileModal()" style="margin-top:20px; width:100%; padding:12px;">Cerrar</button>
-    </div>
-  </div>
-  
-  <script>
-  	 function showProfileSwitcher() {
-      document.getElementById('profileModal').style.display = 'flex';
-    }
+						<div class="composer-footer">
+							<div>
+								<label class="file-pill" for="mediaInput">📷 Agregar foto o video</label>
+								<input id="mediaInput" type="file" accept="image/*,video/*" multiple />
+								<span id="fileName" class="file-name"></span>
+							</div>
 
-    function closeProfileModal() {
-      document.getElementById('profileModal').style.display = 'none';
-    }
+							<button id="publishBtn" class="btn btn-primary" type="submit">
+								Publicar
+							</button>
+						</div>
+					</form>
 
-    function selectProfile(type) {
-      currentProfile = profiles[type];
-      closeProfileModal();
-      alert(`Ahora estás publicando como: ${currentProfile.name}`);
-    }
+					<div id="loader" class="loader">
+						Cargando publicaciones...
+					</div>
+					<div id="postsList"></div>
+				</div>
+
+				<!-- Stories -->
+				<div id="storiesPanel" class="panel">
+					<div class="composer">
+						<h3 style="margin:0 0 12px;">Crear Story (desaparece en 24h)</h3>
+						<input type="file" id="storyInput" accept="image/*,video/*">
+						<button class="btn btn-primary" style="margin-top:12px;" onclick="createStory()">Publicar Story</button>
+					</div>
+					<div id="storiesList" class="story-container"></div>
+				</div>
 
 
-    // === Perfiles disponibles ===
-    const profiles = {
-      owner: {
-        name: "Don Smaily Chickles",
-        avatar: "https://i.postimg.cc/5tjZDbFG/8d7265278f12c0dac6bdacbc0ab2ea19.webp"
-      },
-      persona1: {
-        name: "Itxel",
-        avatar: "https://i.postimg.cc/mZVHmxyz/20260725-040054.jpg"
-      },
-      persona2: {
-        name: "Alguien mas",
-        avatar: "https://i.postimg.cc/wvZMh3Fd/1784940144053.jpg"
-      }
-    };
+				<div id="photosPanel" class="panel">
+					<div class="gallery-panel">
+						<h2 class="section-title">Galería multimedia</h2>
+						<div id="gallery" class="gallery"></div>
+					</div>
+				</div>
 
-  </script>
+				<div id="aboutPanel" class="panel">
+					<div class="info-panel">
+						<h2 class="section-title">Información detallada</h2>
 
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+						<div class="info-grid">
+							<div class="info-card">
+								<span>Nombre</span>
+								<strong>Don Smaily Chickles</strong>
+							</div>
 
-    const SUPABASE_URL = 'https://gthrsowfjdvrqxtqnuwp.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0aHJzb3dmamR2cnF4dHFudXdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUxNjM2NzIsImV4cCI6MjEwMDczOTY3Mn0.YoDY2hYgRZ8bBEdhBPK9wu3PnuJMcES8xp286fnDaUE';
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+							<div class="info-card">
+								<span>Personalidad</span>
+								<strong>Creativa, elegante y con sentido del humor</strong>
+							</div>
 
-    let currentProfile = {
-      name: "Don Smaily Chickles",
-      avatar: "https://i.postimg.cc/5tjZDbFG/8d7265278f12c0dac6bdacbc0ab2ea19.webp"
-    };
+							<div class="info-card">
+								<span>Intereses</span>
+								<strong>Fotografía, videos, historias, tecnología y momentos únicos</strong>
+							</div>
 
-    // === Pestañas ===
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-        
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.tab + 'Panel').classList.add('active');
+							<div class="info-card">
+								<span>Frase</span>
+								<strong>“La vida se ve mejor cuando se comparte con estilo.”</strong>
+							</div>
 
-        if (tab.dataset.tab === 'stories') loadStories();
-        if (tab.dataset.tab === 'photos') loadGallery();
-      });
-    });
+							<div class="info-card">
+								<span>Estado</span>
+								<strong>Construyendo una presencia digital memorable</strong>
+							</div>
 
-    // === Crear Publicación ===
-    window.createPost = async function() {
-      const content = document.getElementById('postContent').value.trim();
-      const files = document.getElementById('mediaInput').files;
+							<div class="info-card">
+								<span>Proyecto</span>
+								<strong>Perfil social personal conectado a Supabase</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<div id="profileModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:100; align-items:center; justify-content:center;">
+		<div style="background:white; padding:30px; border-radius:20px; width:90%; max-width:420px;">
+			<h3 style="margin-top:0;">¿Cómo quieres publicar?</h3>
 
-      if (!content && files.length === 0) {
-        alert("Escribe algo o selecciona un archivo");
-        return;
-      }
+			<div onclick="selectProfile('owner')" style="padding:14px; border:1px solid #ddd; border-radius:12px; margin-bottom:10px; cursor:pointer;">
+				Don Smaily Chickles
+			</div>
+			<div onclick="selectProfile('persona1')" style="padding:14px; border:1px solid #ddd; border-radius:12px; margin-bottom:10px; cursor:pointer;">
+				Persona 1
+			</div>
+			<div onclick="selectProfile('persona2')" style="padding:14px; border:1px solid #ddd; border-radius:12px; cursor:pointer;">
+				Persona 2
+			</div>
 
-      const { data: post, error } = await supabase.from('posts').insert({
-        content: content,
-        author_name: currentProfile.name,
-        author_avatar: currentProfile.avatar
-      }).select().single();
+			<button onclick="closeProfileModal()" style="margin-top:20px; width:100%;">Cerrar</button>
+		</div>
+	</div>
 
-      if (error) {
-        alert("Error al publicar");
-        return;
-      }
+	<div id="toast" class="toast"></div>
+	
+	  <script type="module">
+	    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
-      // Subir archivos (si hay)
-      for (let file of files) {
-        const path = `${post.id}/${Date.now()}-${file.name}`;
-        const { data: upload } = await supabase.storage.from('profile-media').upload(path, file);
-        const { data: urlData } = supabase.storage.from('profile-media').getPublicUrl(path);
+	
+	/*
+	      IMPORTANTE:
+	      Reemplaza estos valores con los de tu proyecto de Supabase.
 
-        await supabase.from('media').insert({
-          post_id: post.id,
-          url: urlData.publicUrl,
-          type: file.type.startsWith('video') ? 'video' : 'image'
-        });
-      }
+	      Supabase > Project Settings > API
+	    */
+	    const SUPABASE_URL = 'https://qegtsaslsseqiwwhfbhg.supabase.co';
+	    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlZ3RzYXNsc3NlcWl3d2hmYmhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM1OTA1NzYsImV4cCI6MjA5OTE2NjU3Nn0.s5Yd9uE4BdyU_1l7sgrxl0-8PjMsXMggTw-S0iqm-hM';
 
-      document.getElementById('postContent').value = '';
-      document.getElementById('mediaInput').value = '';
-      loadPosts();
-    }
+	    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    // === Cargar Publicaciones ===
-    async function loadPosts() {
-      const { data } = await supabase
-        .from('posts')
-        .select(`*, media(*), comments(*)`)
-        .order('created_at', { ascending: false });
+	    const PROFILE_NAME = 'Don Smaily Chickles';
+	    const PROFILE_AVATAR = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=600&q=80';
+	    const BUCKET = 'profile-media';
+	-->
+	<script>
 
-      const container = document.getElementById('postsList');
-      container.innerHTML = '';
+		let currentProfile = {
+			name: "Don Smaily Chickles",
+			avatar: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=600&q=80"
+		};
 
-      data.forEach(post => {
-        const div = document.createElement('div');
-        div.className = 'post';
-        div.innerHTML = `
-          <div class="post-header">
-            <img src="${post.author_avatar}" class="post-avatar">
-            <div>
-              <strong>${post.author_name}</strong><br>
-              <small style="color:#64748b">${new Date(post.created_at).toLocaleString()}</small>
-            </div>
-          </div>
-          <p>${post.content || ''}</p>
-          <div style="margin-top:12px; display:flex; gap:8px;">
-            <button onclick="addComment('${post.id}')">Comentar</button>
-            <button onclick="likePost('${post.id}')">Me gusta</button>
-          </div>
-        `;
-        container.appendChild(div);
-      });
-    }
+		function showProfileSwitcher() {
+			document.getElementById('profileModal').style.display = 'flex';
+		}
 
-    // === Stories (24 horas) ===
-    window.createStory = async function() {
-      const fileInput = document.getElementById('storyInput');
-      if (!fileInput.files.length) return alert("Selecciona una imagen o video");
+		function closeProfileModal() {
+			document.getElementById('profileModal').style.display = 'none';
+		}
 
-      const file = fileInput.files[0];
-      const path = `stories/${Date.now()}-${file.name}`;
-      
-      const { data: upload } = await supabase.storage.from('profile-media').upload(path, file);
-      const { data: urlData } = supabase.storage.from('profile-media').getPublicUrl(path);
+		function selectProfile(type) {
+			if (type === 'owner') {
+				currentProfile = {
+					name: "Don Smaily Chickles",
+					avatar: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=600&q=80"
+				};
+			} else if (type === 'persona1') {
+				currentProfile = {
+					name: "Persona 1",
+					avatar: "https://i.pravatar.cc/150?img=32" // Puedes cambiar esta foto
+				};
+			} else if (type === 'persona2') {
+				currentProfile = {
+					name: "Persona 2",
+					avatar: "https://i.pravatar.cc/150?img=47" // Puedes cambiar esta foto
+				};
+			}
+			const composer = document.getElementById('composer');
+			const postContent = document.getElementById('postContent');
+			const mediaInput = document.getElementById('mediaInput');
+			const fileName = document.getElementById('fileName');
+			const publishBtn = document.getElementById('publishBtn');
+			const postsList = document.getElementById('postsList');
+			const gallery = document.getElementById('gallery');
+			const loader = document.getElementById('loader');
+			const toast = document.getElementById('toast');
 
-      const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+			let postsCache = [];
 
-      await supabase.from('stories').insert({
-        author_name: currentProfile.name,
-        author_avatar: currentProfile.avatar,
-        media_url: urlData.publicUrl,
-        media_type: file.type.startsWith('video') ? 'video' : 'image',
-        expires_at: expiresAt
-      });
+			const clientId = getClientId();
 
-      fileInput.value = '';
-      loadStories();
-    }
+			function getClientId() {
+				let id = localStorage.getItem('dsc_client_id');
 
-    async function loadStories() {
-      const { data } = await supabase
-        .from('stories')
-        .select('*')
-        .gt('expires_at', new Date().toISOString())
-        .order('created_at', { ascending: false });
+				if (!id) {
+					id = crypto.randomUUID();
+					localStorage.setItem('dsc_client_id', id);
+				}
 
-      const container = document.getElementById('storiesList');
-      container.innerHTML = '';
+				return id;
+			}
 
-      data.forEach(story => {
-        const div = document.createElement('div');
-        div.className = 'story-item';
-        div.innerHTML = `
-          <img src="${story.media_url}" style="width:100%; height:100%; object-fit:cover;">
-          <div class="story-author">${story.author_name}</div>
-        `;
-        container.appendChild(div);
-      });
-    }
+			function escapeHTML(value = '') {
+				return value
+				.replaceAll('&', '&amp;')
+				.replaceAll('<', '&lt;')
+				.replaceAll('>', '&gt;')
+				.replaceAll('"', '&quot;')
+				.replaceAll("'", '&#039;');
+			}
 
-    async function loadGallery() {
-      const { data } = await supabase.from('media').select('*').order('created_at', { ascending: false });
-      const container = document.getElementById('gallery');
-      container.innerHTML = '';
-      data.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'gallery-item';
-        div.innerHTML = `<img src="${item.url}">`;
-        container.appendChild(div);
-      });
-    }
+			function formatDate(date) {
+				return new Intl.DateTimeFormat('es', {
+					dateStyle: 'medium',
+					timeStyle: 'short'
+				}).format(new Date(date));
+			}
 
-    // Funciones básicas
-    window.addComment = async function(postId) {
-      const text = prompt("Escribe tu comentario:");
-      if (!text) return;
+			function showToast(message) {
+				toast.textContent = message;
+				toast.classList.add('show');
 
-      await supabase.from('comments').insert({
-        post_id: postId,
-        author: currentProfile.name,
-        body: text
-      });
-      loadPosts();
-    }
+				setTimeout(() => {
+					toast.classList.remove('show');
+				}, 2400);
+			}
 
-    window.likePost = async function(postId) {
-      await supabase.from('likes').insert({ post_id: postId, client_id: crypto.randomUUID() });
-      alert("¡Gracias por tu like!");
-    }
+			window.showToast = showToast;
 
-    // Carga inicial
-    function init() {
-      loadPosts();
-      // Cargar stories y galería cuando se cambie de pestaña
-    }
+			window.scrollToComposer = function () {
+				document.querySelector('[data-tab="posts"]').click();
 
-    init();
-  </script>
+				setTimeout(() => {
+					composer.scrollIntoView({
+						behavior: 'smooth', block: 'center'
+					});
+					postContent.focus();
+				}, 100);
+			};
+
+			mediaInput.addEventListener('change', () => {
+				const files = [...mediaInput.files];
+
+				if (!files.length) {
+					fileName.textContent = '';
+					return;
+				}
+
+				fileName.textContent = files.length === 1
+				? files[0].name: `${files.length} archivos seleccionados`;
+			});
+
+			document.querySelectorAll('.tab').forEach(tab => {
+				tab.addEventListener('click', () => {
+					document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+					document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+
+					tab.classList.add('active');
+
+					const selected = tab.dataset.tab;
+
+					document.getElementById(`${selected}Panel`).classList.add('active');
+
+					if (tab.dataset.tab === 'stories') loadStories();
+
+					if (selected === 'photos') {
+						loadGallery();
+					}
+				});
+			});
+
+			composer.addEventListener('submit', async event => {
+				event.preventDefault();
+
+				const content = postContent.value.trim();
+				const files = [...mediaInput.files];
+
+				if (!content && !files.length) {
+					showToast('Escribe algo o selecciona una foto/video.');
+					return;
+				}
+
+				publishBtn.disabled = true;
+				publishBtn.textContent = 'Publicando...';
+
+				try {
+					const {
+						data: post,
+						error: postError
+					} = await supabase
+					.from('posts')
+					.insert({
+						content
+					})
+					.select()
+					.single();
+
+					if (postError) throw postError;
+
+					for (const file of files) {
+						const fileType = file.type.startsWith('video') ? 'video': 'image';
+						const extension = file.name.split('.').pop();
+						const safeName = file.name
+						.replace(/\.[^/.]+$/, '')
+						.replace(/[^a-z0-9]/gi, '-')
+						.toLowerCase();
+
+						const path = `${post.id}/${crypto.randomUUID()}-${safeName}.${extension}`;
+
+						const {
+							error: uploadError
+						} = await supabase.storage
+						.from(BUCKET)
+						.upload(path, file, {
+							cacheControl: '3600',
+							upsert: false
+						});
+
+						if (uploadError) throw uploadError;
+
+						const {
+							data: publicData
+						} = supabase.storage
+						.from(BUCKET)
+						.getPublicUrl(path);
+
+						const {
+							error: mediaError
+						} = await supabase
+						.from('media')
+						.insert({
+							post_id: post.id,
+							url: publicData.publicUrl,
+							path,
+							type: fileType
+						});
+
+						if (mediaError) throw mediaError;
+					}
+
+					postContent.value = '';
+					mediaInput.value = '';
+					fileName.textContent = '';
+
+					showToast('Publicación creada correctamente.');
+					await loadPosts();
+				} catch (error) {
+					console.error(error);
+					showToast('Error al publicar. Revisa Supabase y la consola.');
+				} finally {
+					publishBtn.disabled = false;
+					publishBtn.textContent = 'Publicar';
+				}
+			});
+
+			async function loadPosts() {
+				loader.classList.add('show');
+
+				const {
+					data, error
+				} = await supabase
+				.from('posts')
+				.select(`
+					id,
+					content,
+					created_at,
+					media (
+					id,
+					url,
+					type,
+					created_at
+					),
+					comments (
+					id,
+					author,
+					body,
+					created_at
+					),
+					likes (
+					id,
+					client_id
+					)
+					`)
+				.order('created_at',
+					{
+						ascending: false
+					});
+
+				loader.classList.remove('show');
+
+				if (error) {
+					console.error(error);
+					postsList.innerHTML = `<div class="empty">No se pudieron cargar las publicaciones.</div>`;
+					return;
+				}
+
+				postsCache = data || [];
+				renderPosts();
+			}
+
+			function renderPosts() {
+				if (!postsCache.length) {
+					postsList.innerHTML = `
+					<div class="empty">
+					Todavía no hay publicaciones. Crea la primera publicación de Don Smaily Chickles.
+					</div>
+					`;
+					return;
+				}
+
+				postsList.innerHTML = postsCache.map(post => {
+					const media = post.media || [];
+					const comments = (post.comments || []).sort(
+						(a, b) => new Date(a.created_at) - new Date(b.created_at)
+					);
+					const likes = post.likes || [];
+					const liked = likes.some(like => like.client_id === clientId);
+					const mediaClass = media.length === 1 ? 'one': media.length === 2 ? 'two': 'many';
+
+					const mediaHTML = media.length ? `
+					<div class="media-grid ${mediaClass}">
+					${media.map(item => {
+						if (item.type === 'video') {
+							return `
+							<video controls src="${item.url}"></video>
+							`;
+						}
+
+						return `
+						<img src="${item.url}" alt="Multimedia de la publicación" loading="lazy" />
+						`;
+					}).join('')}
+					</div>
+					`: '';
+
+					const commentsHTML = comments.length ? `
+					<div class="comments">
+					${comments.map(comment => `
+						<div class="comment">
+						<strong>${escapeHTML(comment.author || 'Visitante')}</strong>
+						${escapeHTML(comment.body)}
+						</div>
+						`).join('')}
+					</div>
+					`: '';
+
+					return `
+					<article class="post" id="post-${post.id}">
+					<div class="post-head">
+					<img class="post-avatar" src="${PROFILE_AVATAR}" alt="${PROFILE_NAME}" />
+
+					<div>
+					<div class="post-name">${PROFILE_NAME}</div>
+					<div class="post-date">${formatDate(post.created_at)}</div>
+					</div>
+					</div>
+
+					${post.content ? `<div class="post-text">${escapeHTML(post.content)}</div>`: ''}
+
+					${mediaHTML}
+
+					<div class="metrics">
+					<span>${likes.length} me gusta</span>
+					<span>${comments.length} comentarios</span>
+					</div>
+
+					<div class="post-actions">
+					<button
+					class="action-btn ${liked ? 'liked': ''}"
+					onclick="toggleLike('${post.id}')"
+					>
+					👍 Me gusta
+					</button>
+
+					<button
+					class="action-btn"
+					onclick="focusComment('${post.id}')"
+					>
+					💬 Comentar
+					</button>
+
+					<button
+					class="action-btn"
+					onclick="sharePost('${post.id}')"
+					>
+					↗ Compartir
+					</button>
+					</div>
+
+					${commentsHTML}
+
+					<form class="comment-form" onsubmit="addComment(event, '${post.id}')">
+					<input
+					id="comment-${post.id}"
+					type="text"
+					placeholder="Escribe un comentario..."
+					autocomplete="off"
+					/>
+					<button class="btn btn-soft" type="submit">Enviar</button>
+					</form>
+					</article>
+					`;
+				}).join('');
+			}
+
+			window.toggleLike = async function (postId) {
+				const post = postsCache.find(item => item.id === postId);
+				const existingLike = post?.likes?.find(like => like.client_id === clientId);
+
+				try {
+					if (existingLike) {
+						const {
+							error
+						} = await supabase
+						.from('likes')
+						.delete()
+						.eq('id', existingLike.id);
+
+						if (error) throw error;
+					} else {
+						const {
+							error
+						} = await supabase
+						.from('likes')
+						.insert({
+							post_id: postId,
+							client_id: clientId
+						});
+
+						if (error) throw error;
+					}
+
+					await loadPosts();
+				} catch (error) {
+					console.error(error);
+					showToast('No se pudo actualizar el like.');
+				}
+			};
+
+			window.focusComment = function (postId) {
+				const input = document.getElementById(`comment-${postId}`);
+
+				if (input) {
+					input.focus();
+				}
+			};
+
+			window.addComment = async function (event, postId) {
+				event.preventDefault();
+
+				const input = document.getElementById(`comment-${postId}`);
+				const body = input.value.trim();
+
+				if (!body) return;
+
+				try {
+					const {
+						error
+					} = await supabase
+					.from('comments')
+					.insert({
+						post_id: postId,
+						author: 'Visitante',
+						body
+					});
+
+					if (error) throw error;
+
+					input.value = '';
+					await loadPosts();
+				} catch (error) {
+					console.error(error);
+					showToast('No se pudo publicar el comentario.');
+				}
+			};
+
+			window.sharePost = async function (postId) {
+				const url = `${location.origin}${location.pathname}#post-${postId}`;
+
+				try {
+					if (navigator.share) {
+						await navigator.share({
+							title: `Publicación de ${PROFILE_NAME}`,
+							text: `Mira esta publicación de ${PROFILE_NAME}`,
+							url
+						});
+					} else {
+						await navigator.clipboard.writeText(url);
+						showToast('Enlace copiado al portapapeles.');
+					}
+				} catch {
+					showToast('No se pudo compartir la publicación.');
+				}
+			};
+
+
+			closeProfileModal();
+			showToast(`Ahora publicas como: ${currentProfile.name}`);
+		}
+
+		// === Stories (24 horas) ===
+		window.createStory = async function() {
+			const fileInput = document.getElementById('storyInput');
+			if (!fileInput.files.length) return alert("Selecciona una imagen o video");
+
+			const file = fileInput.files[0];
+			const path = `stories/${Date.now()}-${file.name}`;
+
+			const {
+				data: upload
+			} = await supabase.storage.from('profile-media').upload(path, file);
+			const {
+				data: urlData
+			} = supabase.storage.from('profile-media').getPublicUrl(path);
+
+			const expiresAt = new Date(Date.now() + 24 * 60 * 60 *
+				1000).toISOString();
+
+			await supabase.from('stories').insert({
+				author_name: currentProfile.name,
+				author_avatar: currentProfile.avatar,
+				media_url: urlData.publicUrl,
+				media_type: file.type.startsWith('video') ? 'video': 'image',
+				expires_at: expiresAt
+			});
+
+			fileInput.value = '';
+			loadStories();
+		}
+
+		async function loadStories() {
+			const {
+				data
+			} = await supabase
+			.from('stories')
+			.select('*')
+			.gt('expires_at', new Date().toISOString())
+			order('created_at', {
+				ascending: false
+			});
+
+			const container = document.getElementById('storiesList');
+			container.innerHTML = '';
+
+			data.forEach(story => {
+				const div = document.createElement('div');
+				div.className = 'story-item';
+				div.innerHTML = `
+				<img src="${story.media_url}" style="width:100%; height:100%; object-fit:cover;">
+				<div class="story-author">${story.author_name}</div>
+				`;
+				container.appendChild(div);
+			});
+		}
+
+		async function loadGallery() {
+			const {
+				data,
+				error
+			} = await supabase
+			.from('media')
+			.select('id, url, type, created_at')
+			.order('created_at', {
+				ascending: false
+			});
+
+			if (error) {
+				console.error(error);
+				gallery.innerHTML = `<div class="empty">No se pudo cargar la galería.</div>`;
+				return;
+			}
+
+			if (!data.length) {
+				gallery.innerHTML = `
+				<div class="empty" style="grid-column: 1 / -1;">
+				Todavía no hay fotos ni videos publicados.
+				</div>
+				`;
+				return;
+			}
+
+			gallery.innerHTML = data.map(item => {
+				if (item.type === 'video') {
+					return `
+					<div class="gallery-item">
+					<video src="${item.url}" controls></video>
+					<div class="gallery-type">Video</div>
+					</div>
+					`;
+				}
+
+				return `
+				<a class="gallery-item" href="${item.url}" target="_blank" rel="noopener">
+				<img src="${item.url}" alt="Foto publicada" loading="lazy" />
+				<div class="gallery-type">Foto</div>
+				</a>
+				`;
+			}).join('');
+		}
+		function init() {
+			loadPosts();
+			// Cargar stories y galería cuando se cambie de pestaña
+		}
+
+		init();
+	</script>
 </body>
 </html>
