@@ -95,6 +95,19 @@
       font-size: 1rem;
       resize: vertical;
     }
+
+    .loader {
+			display: none;
+			color: var(--muted);
+			font-weight: 800;
+			text-align: center;
+			padding: 18px;
+		}
+
+		.loader.show {
+			display: block;
+		}
+
     .btn {
       padding: 12px 20px;
       border-radius: 14px;
@@ -195,7 +208,6 @@
         <button class="tab" data-tab="photos">Fotos</button>
         <button class="tab" data-tab="about">Información</button>
       </div>
-    </div>
 
     <!-- Contenido -->
     <div style="margin-top: 25px;">
@@ -210,8 +222,13 @@
             <button class="btn btn-primary" onclick="createPost()">Publicar</button>
           </div>
         </div>
-        <div id="postsList"></div>
+        <div id="postsList" class="post-container"></div>
       </div>
+      <div id="loader" class="loader">
+						Cargando publicaciones...
+					</div>
+					<div id="postsList"></div>
+    </div>
 
       <!-- Stories -->
       <div id="storiesPanel" class="panel">
